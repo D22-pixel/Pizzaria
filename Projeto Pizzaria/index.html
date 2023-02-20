@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!--vamos usar a tag header para o cabeçalho da pagina-->
+    <header>
+        <ul><!--tag listas ordenadas-->
+            <li><h1>D22- Pizzaria</h1></li>
+            <li><h2>Vendas Pizzaria</h2></li>
+        </ul>
+    </header>
+    <section>
+        <form>
+            <h3>Escolha o sabor da sua pizza</h3>
+            <ul><!--lista de produtos-->
+                <li><input type="radio" id="mussarela" name="pizzas"><label>Mussarela</label></li>
+                <li><input type="radio" id="calabresa" name="pizzas"><label>Calabresa</label></li>
+                <li><input type="radio" id="portuguesa" name="pizzas"><label>Portuguesa</label></li>
+                <li><input type="radio" id="chocolate" name="pizzas"><label>Chocolate</label></li>
+                <li><input type="radio" id="margarita" name="pizzas"><label>Margarita</label></li>              
+            </ul>
+        </form>
+    </section>
+
+    <section><!--criar botões -->
+        <button id="vendas">Vendas</button>
+        <button id="estorno">Estorno</button>
+    </section>
+
+    <section id="table"> <!--pode ser tanto section ou div-->
+        <table> <!--criar tabelas temos tags de linhas e colunas, sempre linhas primeiro-->
+            <tr>
+                <th>Sabores</th><!--tag de cabeçãlho de coluna-->
+                <th>Quantidade</th>
+                <th>Valores</th>
+            </tr>
+
+            <tr>
+             <td>Mussarela</td><td id="resultadoMussarela"></td><td id="vendaMussarela"></td>
+            </tr>
+
+            <tr>
+                <td>Calabresa</td><td id="resultadoCalabresa"></td><td id="vendaCalabresa"></td> 
+            </tr>
+
+            <tr>
+                <td>Portuguesa</td><td id="resultadoPortuguesa"></td><td id="vendaPortuguesa"></td>
+            </tr>
+             
+            <tr>
+                <td>Chocolate</td><td id="resultadoChocolate"></td><td id="vendaChocolate"></td>
+            </tr>
+           
+            <tr>
+                <td>Margarita</td><td id="resultadoMargarita"></td><td id="vendaMargarita"></td>
+            </tr>
+            
+        </table>
+    </section>
+
+    <section>
+        <button id="export">Planilha</button>
+    </section>
+
+    <section id="info">Copyright©-D22</section>
+    <script src="tableToExcel.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
